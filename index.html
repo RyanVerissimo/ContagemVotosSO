@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete - Melhor Sistema Operacional para Servidores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enquete - Melhor Sistema Operacional para Servidores</h1>
+        <div class="options">
+            <button class="option-btn" onclick="vote(1)">Windows Server</button>
+            <button class="option-btn" onclick="vote(2)">Unix</button>
+            <button class="option-btn" onclick="vote(3)">Linux</button>
+            <button class="option-btn" onclick="vote(4)">Netware</button>
+            <button class="option-btn" onclick="vote(5)">Mac OS</button>
+            <button class="option-btn" onclick="vote(6)">Outro</button>
+            <button id="toggle-btn" class="option-btn" onclick="toggleVoting()">Encerrar Votação</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Resultados da Enquete</h2>
+            <table>
+                <tr>
+                    <th>Sistema Operacional</th>
+                    <th>Votos</th>
+                    <th>%</th>
+                </tr>
+                <tbody id="result-table"></tbody>
+                <tr>
+                    <td colspan="2" style="text-align: right;"><strong>Total:</strong></td>
+                    <td id="total-votes">0</td>
+                </tr>
+            </table>
+            <div id="winner" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <audio id="button-sound" src="assets/button-press.wav"></audio>
+
+    <script src="./script.js"></script>
+    
+</body>
+
+</html>
